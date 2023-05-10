@@ -1,6 +1,7 @@
 # BIRD CLUB MANAGEMENT
 ##### REQUIREMENTS DOCUMENTATION #2
 <br/>
+
 ## GUEST
 #### Accessible content:
 + View information about the bird club, its mission, and its upcoming events (literally About us section). 
