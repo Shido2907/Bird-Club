@@ -1,6 +1,6 @@
 # BIRD CLUB MANAGEMENT
-### REQUIREMENTS DOCUMENTATION #2
-
+##### REQUIREMENTS DOCUMENTATION #2
+<br/>
 ## GUEST
 #### Accessible content:
 + View information about the bird club, its mission, and its upcoming events (literally About us section). 
@@ -13,7 +13,7 @@
 + Receive email updates about upcoming bird club events or news. 
 + Have the ability to subscribe/unsubscribe from email updates if desired. 
 + Contact the bird club for more information or to express interest in joining.
-
+<br/>
 
 ## MEMBER
 #### Individual:
@@ -29,7 +29,7 @@
 + Participate in discussions on the forum, ask and answer questions, and share bird-watching experiences with other members. 
 + Manage their participation in competitions, including registration, payment of fees, check-in, feedback, and viewing results for each round and the final. 
 + Vote and make predictions about the results of competitions and the performance of birds. 
-
+<br/>
 
 ## STAFF
 #### Member support:
@@ -40,7 +40,7 @@
 + Manage and update the content of the website, including information about the bird club, upcoming events, and featured birds. 
 + Manage and coordinate bird-watching events, including creating event pages, sending invitations to members. 
 + Approving participation requests, managing bird check-ins, updating results for each round.
-
+<br/>
 
 ## MANAGER
 #### Data processing:
@@ -49,7 +49,7 @@
 
 #### Staffs management:
 + Manage and supervise staff members responsible for website management, event coordination, and member support. 
-
+<br/>
 
 ## ADMIN
 #### Members management:
@@ -71,8 +71,7 @@
 #### Fund management:
 + Manage investment/ donation/ subscription from club member.
 + Track membership payments and renewals. 
-
-
+<br/>
 
 ### Reference:
 #### American Kennel Club
