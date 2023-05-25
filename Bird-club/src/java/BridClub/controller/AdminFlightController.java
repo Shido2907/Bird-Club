@@ -5,9 +5,11 @@
  */
 package BridClub.controller;
 
-import com.fptuni.prj301.demo.dbmanager.AdminFlightManager;
-import com.fptuni.prj301.demo.dbmanager.UserAirportManager;
-import com.fptuni.prj301.demo.model.Flight;
+import BridClub.dbmanager.AdminFlightManager;
+import BridClub.dbmanager.UserAirportManager;
+import BridClub.model.AdminSession;
+import BridClub.model.Flight;
+import BridClub.utils.DBUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

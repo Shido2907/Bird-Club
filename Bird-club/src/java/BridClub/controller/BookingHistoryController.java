@@ -5,9 +5,11 @@
  */
 package BridClub.controller;
 
-import com.fptuni.prj301.demo.dbmanager.UserInvoiceManager;
-import com.fptuni.prj301.demo.dbmanager.UserTicketManager;
-import com.fptuni.prj301.demo.model.Ticket;
+import BridClub.dbmanager.UserInvoiceManager;
+import BridClub.dbmanager.UserTicketManager;
+import BridClub.model.AdminSession;
+import BridClub.model.Ticket;
+import BridClub.utils.DBUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.ServletException;

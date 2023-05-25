@@ -5,13 +5,15 @@
  */
 package BridClub.controller;
 
-import com.fptuni.prj301.demo.dbmanager.UserAirportManager;
-import com.fptuni.prj301.demo.dbmanager.UserFlightManager;
-import com.fptuni.prj301.demo.dbmanager.UserInvoiceManager;
-import com.fptuni.prj301.demo.dbmanager.UserSeatManager;
-import com.fptuni.prj301.demo.dbmanager.UserTicketManager;
-import com.fptuni.prj301.demo.model.Invoice;
-import com.fptuni.prj301.demo.model.Ticket;
+import BridClub.dbmanager.UserAirportManager;
+import BridClub.dbmanager.UserFlightManager;
+import BridClub.dbmanager.UserInvoiceManager;
+import BridClub.dbmanager.UserSeatManager;
+import BridClub.dbmanager.UserTicketManager;
+import BridClub.model.AdminSession;
+import BridClub.model.Invoice;
+import BridClub.model.Ticket;
+import BridClub.utils.DBUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;

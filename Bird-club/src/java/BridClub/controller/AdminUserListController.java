@@ -5,16 +5,15 @@
  */
 package BridClub.controller;
 
+import BridClub.dbmanager.AdminUserListManager;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.fptuni.prj301.demo.dbmanager.AdminFlightManager;
-import com.fptuni.prj301.demo.dbmanager.UserAccessManager;
-import com.fptuni.prj301.demo.dbmanager.AdminUserListManager;
-import com.fptuni.prj301.demo.model.User;
-import com.fptuni.prj301.demo.model.UserSession;
+import BridClub.model.AdminSession;
+import BridClub.model.User;
+import BridClub.utils.DBUtils;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
@@ -54,6 +53,8 @@ public class AdminUserListController extends HttpServlet {
             response.sendRedirect("admin_user_list.jsp");
         }else if(action.equalsIgnoreCase("edit")){
             String userId = request.getParameter("userId");
+
+
             User user = new AdminUserListManager().loadUser(userId);
             request.getSession().setAttribute("user", user);
             response.sendRedirect("edit_user_form.jsp");

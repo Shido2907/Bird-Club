@@ -4,8 +4,9 @@
  */
 package BridClub.controller;
 
-import com.fptuni.prj301.demo.dbmanager.AdminAccessManager;
-import com.fptuni.prj301.demo.model.AdminSession;
+import BridClub.dbmanager.AdminAccessManager;
+import BridClub.model.AdminSession;
+import BridClub.utils.DBUtils;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

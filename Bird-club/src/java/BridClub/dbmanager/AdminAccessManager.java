@@ -1,7 +1,7 @@
 package BridClub.dbmanager;
 
-import com.fptuni.prj301.demo.model.AdminSession;
-import com.fptuni.prj301.demo.utils.DBUtils;
+import BridClub.model.AdminSession;
+import BridClub.utils.DBUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -5,8 +5,9 @@
  */
 package BridClub.controller;
 
-import com.fptuni.prj301.demo.dbmanager.AdminInvoiceManager;
-import com.fptuni.prj301.demo.model.Invoice;
+import BridClub.dbmanager.AdminInvoiceManager;
+import BridClub.model.AdminSession;
+import BridClub.utils.DBUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
