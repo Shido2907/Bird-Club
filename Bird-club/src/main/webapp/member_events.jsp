@@ -1,7 +1,12 @@
+<%-- 
+    Document   : member_events
+    Created on : Jun 4, 2023, 2:45:06 PM
+    Author     : Tue
+--%>
 
-<!doctype html>
-
-  <html class="no-js"  lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+ <html class="no-js"  lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
 
 	<head>
   
@@ -5591,4 +5596,4 @@ var mc4wp_ajax_vars = {"loading_character":"\u2022","ajax_url":"https:\/\/www.bi
 @media only screen and (max-width: 400px){ .hustle-ui.hustle_module_id_13[data-id="13"] h2 span{font-size: 12px;} }</style>		
 </body><!-- end body from header.php -->
 	
-</html><!-- end html from header.php -->
+</html>
