@@ -5,19 +5,32 @@
         <param-value>Vietnamese</param-value>
     </context-param>
     <welcome-file-list>
-        <welcome-file>home</welcome-file>
+        <welcome-file>member_homepage.jsp</welcome-file>
     </welcome-file-list>
-    
     <servlet>
         <servlet-name>HomepageController</servlet-name>
         <servlet-class>com.fptuni.prj301.demo.controller.HomepageController</servlet-class>
     </servlet>
-    
     <servlet-mapping>
         <servlet-name>HomepageController</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>UserAccessController</servlet-name>
+        <servlet-class>com.fptuni.prj301.demo.controller.UserAccessController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserAccessController</servlet-name>
+        <url-pattern>/UserAccessController/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>StaffAccountController</servlet-name>
+        <servlet-class>com.fptuni.prj301.demo.controller.StaffAccountController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StaffAccountController</servlet-name>
+        <url-pattern>/StaffAccountController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

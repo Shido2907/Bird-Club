@@ -12,69 +12,132 @@ import java.util.Date;
  */
 public class UserSession {
 
-    private int id;
-    private String username;
-    private String accessRight;
+    private String UID;
+    private String userName;
+    private String fullName;
     private String phone;
     private String email;
-    private Date loginDate;
+    private String password;
+    private String role;
+    private Date expriedDate;
+    private String Status;
+    private Date signUpDate;
+    private String MID;
+    private String gender;
 
-    public int getId() {
-        return id;
+    public UserSession() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public UserSession(String UID, String userName, String fullName, String phone, String email, String password, String role, Date expriedDate, String Status, Date signupDateDate, String MID, String gender) {
+        this.UID = UID;
+        this.userName = userName;
+        this.fullName = fullName;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.expriedDate = expriedDate;
+        this.Status = Status;
+        this.signUpDate = signupDateDate;
+        this.MID = MID;
+        this.gender = gender;
     }
 
-    public Date getLoginDate() {
-        return loginDate;
+    public String getUserId() {
+        return UID;
     }
 
-    public String getAccessRight() {
-        return accessRight;
+    public void setUserId(String UID) {
+        this.UID = UID;
     }
 
-    public void setAccessRight(String accessRight) {
-        this.accessRight = accessRight;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLoginDate(Date loginDate) {
-        this.loginDate = loginDate;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    /**
-     * Get the value of username
-     *
-     * @return the value of username
-     */
-    public String getUsername() {
-        return username;
+    public String getFullName() {
+        return fullName;
     }
 
-    public String getEmail() {
-        return email;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    /**
-     * Set the value of username
-     *
-     * @param username new value of username
-     */
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Date getExpriedDate() {
+        return expriedDate;
+    }
+
+    public void setExpriedDate(Date expriedDate) {
+        this.expriedDate = expriedDate;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    public Date getSignUpDate() {
+        return signUpDate;
+    }
+
+    public void setSignUpDate(Date signupDateDate) {
+        this.signUpDate = signupDateDate;
+    }
+
+    public String getMID() {
+        return MID;
+    }
+
+    public void setMID(String MID) {
+        this.MID = MID;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    
 }

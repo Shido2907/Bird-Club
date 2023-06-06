@@ -30,7 +30,7 @@ public class AdminUserListManager extends ArrayList<User> {
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
                 User user = new User();
-                user.setUserId(rs.getInt("id"));
+                user.setUserId(rs.getString("id"));
                 user.setUserName(rs.getString("name"));
                 user.setPhone(rs.getString("phone"));
                 user.setEmail(rs.getString("email"));
@@ -69,7 +69,7 @@ public class AdminUserListManager extends ArrayList<User> {
             ResultSet rs = stm.executeQuery();
             if (rs.next()) {
                 user = new User();
-                user.setUserId(rs.getInt("id"));
+                user.setUserId(rs.getString("id"));
                 user.setUserName(rs.getString("name"));
                 user.setPhone(rs.getString("phone"));
                 user.setEmail(rs.getString("email"));

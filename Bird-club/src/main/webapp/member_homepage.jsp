@@ -104,7 +104,7 @@
                         <h2 class="has-text-align-center has-white-color has-text-color has-large-font-size" id="join-as-member">Make a Difference</h2>
                         <p class="has-text-align-center has-white-color has-text-color">Let’s work together to protect birds and habitats</p>
                         <div class="is-layout-flex wp-block-buttons is-content-justification-center">
-                            <div class="wp-block-button"><a class="wp-block-button__link has-orange-background-color has-background" href="https://join.birds.cornell.edu/page/14619/donate/1">Join as a Member</a></div>
+                            <div class="wp-block-button"><a class="wp-block-button__link has-orange-background-color has-background" href="login.jsp">Join as a Member</a></div>
                         </div>
                         <p class="has-text-align-center has-white-color has-text-color"><small>Get the beautiful&nbsp;<em>Living Bird</em>&nbsp;magazine right in your mailbox</small></p>
                     </div>

@@ -6,7 +6,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
+
 
 
 /*
@@ -19,104 +21,116 @@ import java.util.Date;
  */
 public class UserAccessManager {
 
-    public static UserSession login(String username, String password) {
-        UserSession us = null;
-        String sql = "select [id], [name], [email], [phone] from [user] "
-                + " where [name] = ? and [password] = ?";
-        try {
-            Connection conn = DBUtils.getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
+       public static UserSession login(String username, String password) {
+        UserSession user = null;
+        String sql = "SELECT * FROM [User] WHERE username = ? and password = ?";
 
+        try (Connection conn = DBUtils.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, username);
             ps.setString(2, password);
-
             ResultSet rs = ps.executeQuery();
+
             if (rs.next()) {
+                // Retrieve user attributes from the result set
+                String UID = rs.getString("UID");
+                String userName = rs.getString("userName");
+                String fullName = rs.getString("fullName");
+                String phone = rs.getString("phone");
+                String email = rs.getString("email");
+                String retrievedPassword = rs.getString("password");
+                String role = rs.getString("role");
+                Date expiredDate = rs.getDate("expiredDate");
+                String status = rs.getString("status");
+                Date signupDate = rs.getDate("signupDate");
+                String MID = rs.getString("MID");
+                String gender = rs.getString("gender");
 
-                us = new UserSession();
-
-                us.setId(rs.getInt("id"));
-                us.setUsername(rs.getString("name"));
-                us.setEmail(rs.getString("email"));
-                us.setPhone(rs.getString("phone"));
-                us.setLoginDate(new Date());
-                us.setAccessRight("User");
-
+                // Create a UserSession object with the retrieved attributes
+                user = new UserSession();
+                user.setUserId(UID);
+                user.setUserName(userName);
+                user.setFullName(fullName);
+                user.setPhone(phone);
+                user.setEmail(email);
+                user.setPassword(retrievedPassword);
+                user.setRole(role);
+                user.setExpriedDate(expiredDate);
+                user.setStatus(status);
+                user.setSignUpDate(signupDate);
+                user.setMID(MID);
+                user.setGender(gender);
             }
+
             rs.close();
-            ps.close();
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println("Query Student error!" + ex.getMessage());
-        }
-        return us;
-    }
-
-    public static boolean isUserExist(String username) {
-        boolean check = false;
-        String sql = "select [name] from [user] "
-                + " where [name] = ?";
-        try {
-            Connection conn = DBUtils.getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
-
-            ps.setString(1, username);
-
-            ResultSet rs = ps.executeQuery();
-            check = rs.next();
-            rs.close();
-            ps.close();
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println("Query Student error!" + ex.getMessage());
-        }
-        return check;
-    }
-
-    public static void signup(String username, String password, String email, String phone) {
-
-        String sql = "insert into [user] values "
-                + " (?, ?, ?, ?)";
-        try {
-            Connection conn = DBUtils.getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
-
-            ps.setString(1, username);
-            ps.setString(2, password);
-            ps.setString(3, email);
-            ps.setString(4, phone);
-
-            ResultSet rs = ps.executeQuery();
-            rs.close();
-            ps.close();
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println("Query Student error!" + ex.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
+        return user;
     }
 
-    public static void updateUser(String email, String phone, String username) {
+  public boolean checkUserExists(String username) {
+    String sql = "SELECT COUNT(*) FROM [User] WHERE username = ? ";
 
-        String sql = "UPDATE [user]  \n"
-                + "SET [email] = ?, [phone] =? \n"
-                + "where [name] = ? \n";
-        try {
-            Connection conn = DBUtils.getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
+    try (Connection conn = DBUtils.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setString(1, username);
+ 
+        ResultSet rs = ps.executeQuery();
 
-            ps.setString(1, email);
-            ps.setString(2, phone);
-            ps.setString(3, username);
-            ResultSet rs = ps.executeQuery();
-            rs.close();          
-            ps.close();
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println("Query Student error!" + ex.getMessage());
+        if (rs.next()) {
+            int count = rs.getInt(1);
+            return count > 0;
         }
-
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+
+    return false;
+}
+
+
+
+public boolean SignUp(UserSession user) {
+    String sql = "INSERT INTO [User] (UID, userName, fullName, phone, email, password, role, expiredDate, status, signupDate, MID, Gender) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    try (Connection conn = DBUtils.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+        ps.setString(1, user.getUserId());
+        ps.setString(2, user.getUserName());
+        ps.setString(3, user.getFullName());
+        ps.setString(4, user.getPhone());
+        ps.setString(5, user.getEmail());
+        ps.setString(6, user.getPassword());
+        ps.setString(7, "member"); // Assuming 'role' is always 'member' for sign up
+        ps.setDate(8, new java.sql.Date(user.getExpriedDate().getTime()));
+        ps.setString(9, user.getStatus());
+        ps.setDate(10, new java.sql.Date(user.getSignUpDate().getTime()));
+        ps.setString(11, user.getMID());
+        ps.setString(12, user.getGender());
+
+        int rowsAffected = ps.executeUpdate();
+
+        if (rowsAffected > 0) {
+            ResultSet generatedKeys = ps.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                int generatedId = generatedKeys.getInt(1);
+                user.setUserId(String.valueOf(generatedId)); // Set the generated UID
+            }
+            generatedKeys.close();
+            return true;
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return false;
+}
+
+
+
     
        public static void updateUserPassword(String password, String username) {
 
@@ -139,22 +153,69 @@ public class UserAccessManager {
 
     }
 
-    public  int searchByName(String username) {
-        int userID = -1;
-        String sql = "select id from [user] "
-                + " where [name] = ? ";
+    public UserSession searchByName(String username) {
+        UserSession user = null;
+        String sql = "SELECT * FROM [User] WHERE username = ?";
+
         try (Connection conn = DBUtils.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, username);
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    userID = rs.getInt("id");
-                 
-                }
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                user = new UserSession();
+                user.setUserId(rs.getString("UID"));
+                user.setUserName(rs.getString("userName"));
+                user.setFullName(rs.getString("fullName"));
+                user.setPhone(rs.getString("phone"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                user.setRole(rs.getString("role"));
+                user.setExpriedDate(rs.getDate("expiredDate"));
+                user.setStatus(rs.getString("status"));
+                user.setSignUpDate(rs.getDate("signupDate"));
+                user.setMID(rs.getString("MID"));
+                user.setGender(rs.getString("gender"));
             }
-        } catch (Exception ex) {
-            System.out.println("Error finding user by name: " + ex.getMessage());
+
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return userID;
+
+        return user;
+    }
+
+    
+public static void main(String[] args) {
+    // Create a UserSession object with dummy data
+    UserSession user = new UserSession();
+    user.setUserName("testuser2");
+    user.setFullName("John Doe");
+    user.setPhone("1234567890");
+    user.setEmail("testuser@example.com");
+    user.setPassword("testpass");
+    user.setExpriedDate(new Date());
+    user.setSignUpDate(new Date());
+    user.setMID("M123456");
+    user.setGender("male");
+
+    // Create a UserAccessManager instance
+    UserAccessManager userDao = new UserAccessManager();
+
+    // Call the SignUp method and check the result
+    boolean success = userDao.SignUp(user);
+    System.out.println("ExpiredDate: " + user.getExpriedDate());
+    System.out.println("SignUpDate: " + user.getSignUpDate());
+    System.out.println("User ID: " + user.getUserId());
+
+    if (success) {
+        System.out.println("Signup successful. User ID: " + user.getUserId());
+    } else {
+        System.out.println("Signup failed.");
     }
 }
+
+}
+
+
