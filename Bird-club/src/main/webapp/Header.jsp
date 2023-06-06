@@ -6,33 +6,39 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<nav id="vertical-nav">
-    <ul class="vertical-menu">
-        <li id="vertical-menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1221 current_page_item menu-item-1356"><a href="http://brooklynbirdclub.org/">Home<span></span></a></li>
-        <li id="vertical-menu-item-1360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="NewList.jsp">News<span></span></a></li>
-        <li id="vertical-menu-item-1212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1212"><a href="#">Field Trips<span></span></a>
-            <ul class="sub-menu">
+<html>
+ <header id="main-nav-header">
+                <div id="header-wrapper">
+                    <div class="tiny-bar">
+                        <div class="grid-container top-bar">
+                            <div class="top-bar-left grid-x align-middle small-auto logos">
+                                <div class="cell logo lab">
+                                    <a href="" title="ChimOwners"><img alt="ChimOwners" data-src="" class="lazyload" src=""><noscript><img src="" alt=""></noscript></a>
+                                </div></div></div></div>
 
-                <li class="back-to-parent"><span>Back</span></li>
-                <li id="vertical-menu-item-1362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1362"><a href="http://brooklynbirdclub.org/information-registration/">REGISTRATION INFORMATION<span></span></a></li>
-                <li id="vertical-menu-item-1586" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1586"><a href="Scheldule.jsp">SCHEDULES<span></span></a></li>
-            </ul>
-        </li>
-        <li id="vertical-menu-item-1216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1216"><a href="http://brooklynbirdclub.org/events/category/meetings/list/">Meetings<span></span></a></li>
-        <li id="vertical-menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="Scheldule.jsp">All Events<span></span></a></li>
-        <li id="vertical-menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214"><a target="_blank" href="http://prospectsightings.blogspot.com">Prospect Park Sightings<span></span></a></li>
-        <li id="vertical-menu-item-1855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1855"><a href="#">Birding Brooklyn<span></span></a>
-            <ul class="sub-menu">
-
-                <li class="back-to-parent"><span>Back</span></li>
-                <li id="vertical-menu-item-1363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1363"><a href="http://brooklynbirdclub.org/birding-brooklyn/">BIRDING BROOKLYN MAP<span></span></a></li>
-                <li id="vertical-menu-item-1856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1856"><a href="http://brooklynbirdclub.org/birding-prospect-park/">BIRDING PROSPECT PARK<span></span></a></li>
-            </ul>
-        </li>
-        <li id="vertical-menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a href="http://brooklynbirdclub.org/membership-info/">Membership<span></span></a></li>
-        <li id="vertical-menu-item-1361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a href="http://brooklynbirdclub.org/clapper-rail/">Clapper Rail<span></span></a></li>
-        <li id="vertical-menu-item-1215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1215"><a target="_blank" href="http://www.cafepress.com/brooklynbird">Merchandise<span></span></a></li>
-        <li id="vertical-menu-item-1359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="http://brooklynbirdclub.org/about-the-club/">About Us<span></span></a></li>
-        <li id="vertical-menu-item-1358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="http://brooklynbirdclub.org/contact-us/">Contact Us<span></span></a></li>
-    </ul>
-</nav>
+                    <div class="website-header-container grid-container">
+                        <div class="grid-x header-content persistent-nav main-nav align-bottom nav-column">
+                            <div class="cell flex-child-grow website-nav-container medium-auto small-12">
+                                <nav class="grid-x website-nav hide-for-print" aria-label="Primary">
+                                    <div id="primary-nav-container">   
+                                        <ul id="primary-nav" class="dropdown menu">
+                                            <li id="nav-menu-item-41114" class="birds guide-active menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_homepage.html" class="menu-link main-menu-link">Home</a></li>
+                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_tournament.jsp" class="menu-link main-menu-link">Tournament</a></li>
+                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_fieldtrip_details.jsp" class="menu-link main-menu-link">Field trip</a></li>
+                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_meeting.jsp" class="menu-link main-menu-link">Meeting</a></li>
+                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_article.html" class="menu-link main-menu-link">News</a></li>
+                                            <li id="nav-menu-item-41129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" class="menu-link main-menu-link">Community</a><button aria-haspopup="true" aria-label="Show submenu for Courses"><span class="fa fa-chevron-down" aria-hidden="true"></span></button>
+                                                <ul class="sub-menu hidden menu-odd  menu-depth-1" aria-hidden="true">
+                                                    <li id="nav-menu-item-41702" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_forum.html" class="menu-link sub-menu-link">Forum</a></li>
+                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_locations.html" class="menu-link sub-menu-link">Locations</a></li></ul>
+                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_gallery.html" class="menu-link main-menu-link">Gallery</a></li>
+                                            <li id="nav-menu-item-41129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_profile.html" class="menu-link main-menu-link">Profile</a><button aria-haspopup="true" aria-label="Show submenu for Courses"><span class="fa fa-chevron-down" aria-hidden="true"></span></button>
+                                                <ul class="sub-menu hidden menu-odd  menu-depth-1" aria-hidden="true">
+                                                    <li id="nav-menu-item-41702" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_BirdList.html" class="menu-link sub-menu-link">My bird</a></li>
+                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_checkout.html" class="menu-link sub-menu-link">Membership</a></li>
+                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_Feedback.html" class="menu-link sub-menu-link">Feedback</a></li>
+                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_checkout.html" class="menu-link sub-menu-link">Donation</a></li>
+                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="signin" class="menu-link sub-menu-link">Log out</a></li></ul>
+                                            </li></ul> </div></nav></div></div></div></div>
+ </header>
+</html>

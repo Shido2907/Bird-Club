@@ -1,10 +1,14 @@
 <%@page import="com.fptuni.prj301.demo.model.Image"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
+<!--Header-->
+<%@ include file="header.html" %>
 <!DOCTYPE html>
 <html class="no-js"  lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
     <head>
-        <meta charset="utf-8">	
+        <meta charset="utf-8">
+        <link rel="icon" href="https://www.birds.cornell.edu/home/wp-content/themes/birdpress2/favicon.png">
+        <link href="https://www.birds.cornell.edu/home/wp-content/themes/birdpress2/images/apple-icon-touch.png" rel="apple-touch-icon" />	
         <title>Home</title>
         <link rel="alternate" type="application/rss+xml" title="Birds, Cornell Lab of Ornithology &raquo; Feed" href="https://www.birds.cornell.edu/home/feed/" />
         <link rel="alternate" type="application/rss+xml" title="Birds, Cornell Lab of Ornithology &raquo; Comments Feed" href="https://www.birds.cornell.edu/home/comments/feed/" />
@@ -29,6 +33,8 @@
         <link rel="alternate" type="application/json+oembed" href="https://www.birds.cornell.edu/home/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.birds.cornell.edu%2Fhome%2F" />
         <link rel="alternate" type="text/xml+oembed" href="https://www.birds.cornell.edu/home/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.birds.cornell.edu%2Fhome%2F&#038;format=xml" />
         <link rel="canonical" href="https://www.birds.cornell.edu/home/" />
+        <meta name="description" content="Visitor Center Hours 10 a.m. –4 p.m. Trails open dawn to dusk Plan Your Visit Dive Into Bird ID and Info All About Birds Explore and Contribute eBird Scienc ..." />
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Organization","@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-publishing-organization","url":"https:\/\/www.birds.cornell.edu\/home","name":"Birds, Cornell Lab of Ornithology","description":""},{"@type":"WebSite","@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-website","url":"https:\/\/www.birds.cornell.edu\/home","name":"Birds, Cornell Lab of Ornithology","encoding":"UTF-8","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.birds.cornell.edu\/home\/search\/{search_term_string}\/","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https:\/\/www.birds.cornell.edu\/home\/author\/bce_admin_user\/#schema-author","name":"bce_admin_user","url":"https:\/\/www.birds.cornell.edu\/home\/author\/bce_admin_user\/"},{"@type":"WebPage","@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-webpage","isPartOf":{"@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-website"},"publisher":{"@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-publishing-organization"},"url":"https:\/\/www.birds.cornell.edu\/home\/"},{"@type":"Article","mainEntityOfPage":{"@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-webpage"},"author":{"@id":"https:\/\/www.birds.cornell.edu\/home\/author\/bce_admin_user\/#schema-author"},"publisher":{"@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-publishing-organization"},"dateModified":"2023-05-17T09:09:13","datePublished":"2017-01-24T16:23:12","headline":"Cornell Lab of Ornithology\u2014Home | Birds, Cornell Lab of Ornithology","description":"Visitor Center Hours 10 a.m. \u20134 p.m. Trails open dawn to dusk Plan Your Visit Dive Into Bird ID and Info All About Birds Explore and Contribute eBird Scienc ...","name":"Cornell Lab of Ornithology\u2014Home","image":{"@type":"ImageObject","@id":"https:\/\/www.birds.cornell.edu\/home\/#schema-article-image","url":"https:\/\/www.birds.cornell.edu\/home\/wp-content\/uploads\/2022\/11\/RCKinglet-Dudec-ML-FI.gif","height":1125,"width":1500},"thumbnailUrl":"https:\/\/www.birds.cornell.edu\/home\/wp-content\/uploads\/2022\/11\/RCKinglet-Dudec-ML-FI.gif"}]}</script>
         <meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.birds.cornell.edu/home"><link rel="alternate" href="https://www.birds.cornell.edu/home/wp-json/tribe/events/v1/" />		<script>
             document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
         </script>
@@ -45,39 +51,6 @@
     </head>
     <body class="home page-template page-template-page-home page-template-page-home-php page page-id-5 wp-embed-responsive theme-green nav-column tribe-no-js">
         <main id="main-content">  
-            <header id="main-nav-header">
-                <div id="header-wrapper">
-                    <div class="tiny-bar">
-                        <div class="grid-container top-bar">
-                            <div class="top-bar-left grid-x align-middle small-auto logos">
-                                <div class="cell logo lab">
-                                    <a href="" title="ChimOwners"><img alt="ChimOwners" data-src="" class="lazyload" src=""><noscript><img src="" alt=""></noscript></a>
-                                </div></div></div></div>
-
-                    <div class="website-header-container grid-container">
-                        <div class="grid-x header-content persistent-nav main-nav align-bottom nav-column">
-                            <div class="cell flex-child-grow website-nav-container medium-auto small-12">
-                                <nav class="grid-x website-nav hide-for-print" aria-label="Primary">
-                                    <div id="primary-nav-container">   
-                                        <ul id="primary-nav" class="dropdown menu">
-                                            <li id="nav-menu-item-41114" class="birds guide-active menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_homepage.html" class="menu-link main-menu-link">Home</a></li>
-                                             <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_tournament.jsp" class="menu-link main-menu-link">Tournament</a></li>
-                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_fieldtrip_details.jsp" class="menu-link main-menu-link">Field trip</a></li>
-                                             <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_meeting.jsp" class="menu-link main-menu-link">Meeting</a></li>
-                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_article.html" class="menu-link main-menu-link">News</a></li>
-                                            <li id="nav-menu-item-41129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" class="menu-link main-menu-link">Community</a><button aria-haspopup="true" aria-label="Show submenu for Courses"><span class="fa fa-chevron-down" aria-hidden="true"></span></button>
-                                                <ul class="sub-menu hidden menu-odd  menu-depth-1" aria-hidden="true">
-                                                    <li id="nav-menu-item-41702" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_forum.html" class="menu-link sub-menu-link">Forum</a></li>
-                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_locations.html" class="menu-link sub-menu-link">Locations</a></li></ul>
-                                            <li id="nav-menu-item-41123" class="cams menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_gallery.html" class="menu-link main-menu-link">Gallery</a></li>
-                                            <li id="nav-menu-item-41129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a target="_self" href="member_profile.html" class="menu-link main-menu-link">Profile</a><button aria-haspopup="true" aria-label="Show submenu for Courses"><span class="fa fa-chevron-down" aria-hidden="true"></span></button>
-                                                <ul class="sub-menu hidden menu-odd  menu-depth-1" aria-hidden="true">
-                                                    <li id="nav-menu-item-41702" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_BirdList.html" class="menu-link sub-menu-link">My bird</a></li>
-                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_checkout.html" class="menu-link sub-menu-link">Membership</a></li>
-                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_Feedback.html" class="menu-link sub-menu-link">Feedback</a></li>
-                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="member_checkout.html" class="menu-link sub-menu-link">Donation</a></li>
-                                                    <li id="nav-menu-item-41703" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_self" href="signin" class="menu-link sub-menu-link">Log out</a></li></ul>
-                                            </li></ul> </div></nav></div></div></div></div></header>
 
             <div class="content-container home" style="padding: 0px">
                 <section id="content" class="content" aria-label="Main content">            
@@ -101,26 +74,11 @@
                         <h2 class="has-text-align-center has-large-font-size" id="macaulay-library-photowall">Chim Owners' Library</h2>
                         <p>Epic pictures taken by experts from Chim Owners. For real.</p>
 
-
-
-                        <div>
-                            <%! List<Image> gallery;%>
-                            <% gallery = (List<Image>) request.getAttribute("gallery");
-
-                                for (Image image : gallery) {
-                                    out.print("<img src='"
-                                            + image.getUrl()
-                                            + "' width='200' height='100'>");
-                                }
-
-                            %>           
-                        </div>
-
+                        <div id="my_nanogallery2"></div>
 
                         <div class="is-horizontal is-content-justification-center is-layout-flex wp-container-33 wp-block-buttons">
-                            <div class="wp-block-button" style="margin-top: 50px"><a class="wp-block-button__link wp-element-button" href="member_gallery.html">Browse More Photos</a></div>
+                            <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="member_gallery.html">Browse More Photos</a></div>
                         </div>
-
                     </div>
                     <style>
                         #hero-wrapper .hero-text { width: 600px; }
@@ -148,120 +106,21 @@
                         <div class="is-layout-flex wp-block-buttons is-content-justification-center">
                             <div class="wp-block-button"><a class="wp-block-button__link has-orange-background-color has-background" href="https://join.birds.cornell.edu/page/14619/donate/1">Join as a Member</a></div>
                         </div>
+                        <p class="has-text-align-center has-white-color has-text-color"><small>Get the beautiful&nbsp;<em>Living Bird</em>&nbsp;magazine right in your mailbox</small></p>
                     </div>
                     <style>
                         #hero-wrapper .hero-text { width: 600px; }
                     </style>  
+
                 </section>
             </div>
         </article> 
 
+
     </main>
 
-
-    <footer id="main-footer">
-        <div class="grid-container">
-
-            <div class="footer-menu hide-for-print">
-                <nav aria-label="Site map">
-                    <ul id="footer-nav" class="menu"><li id="menu-item-1223" class="footer-menu-header menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1223"><a href="https://www.birds.cornell.edu/home/about/">About</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-3256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3256"><a href="https://www.birds.cornell.edu/home/about/">Mission</a></li>
-                                <li id="menu-item-1228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1228"><a href="https://www.birds.cornell.edu/home/about/programs/">Programs</a></li>
-                                <li id="menu-item-6129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6129"><a href="https://www.birds.cornell.edu/home/staff-directory/">People</a></li>
-                                <li id="menu-item-9411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9411"><a href="https://www.birds.cornell.edu/home/administrative-board/">Administrative Board</a></li>
-                                <li id="menu-item-3255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3255"><a href="https://www.birds.cornell.edu/home/impact/">Your Impact</a></li>
-                                <li id="menu-item-1231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1231"><a href="https://www.birds.cornell.edu/home/visit/">Visit Us</a></li>
-                                <li id="menu-item-1234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1234"><a href="https://www.birds.cornell.edu/home/jobs/">Careers</a></li>
-                                <li id="menu-item-1290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1290"><a href="https://www.birds.cornell.edu/home/give/corporate-sponsors/">Corporate Sponsors</a></li>
-                                <li id="menu-item-1237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1237"><a href="https://www.birds.cornell.edu/home/news/">News Room</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-1174" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1174"><a href="http://birds.cornell.edu/citizenscience">Citizen Science</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-1176" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1176"><a href="http://ebird.org">eBird</a></li>
-                                <li id="menu-item-1241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1241"><a href="https://feederwatch.org/">Project Feederwatch</a></li>
-                                <li id="menu-item-1242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1242"><a href="https://celebrateurbanbirds.org/">Celebrate Urban Birds</a></li>
-                                <li id="menu-item-1243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1243"><a href="https://nestwatch.org/">NestWatch</a></li>
-                                <li id="menu-item-1244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1244"><a href="https://www.birdcount.org/">Great Backyard Bird Count</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-1245" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1245"><a href="https://academy.allaboutbirds.org/course-list/">Lifelong Learning</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-1246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1246"><a href="https://academy.allaboutbirds.org/">Bird Academy</a></li>
-                                <li id="menu-item-1247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1247"><a href="http://birds.cornell.edu/k12">K–12 Education</a></li>
-                                <li id="menu-item-3215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3215"><a href="https://ebird.org/about/resources/for-young-birders">Young Birders Network</a></li>
-                                <li id="menu-item-3223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3223"><a href="https://www.birds.cornell.edu/students/">Study at Cornell</a></li>
-                                <li id="menu-item-1250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1250"><a href="https://www.birds.cornell.edu/home/visit/events/">Events</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-1294" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1294"><a href="https://www.allaboutbirds.org/">Bird Info &#038; Tools</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1295"><a href="http://allaboutbirds.org/">All About Birds</a></li>
-                                <li id="menu-item-1296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1296"><a href="http://merlin.allaboutbirds.org">Merlin Bird ID App</a></li>
-                                <li id="menu-item-1297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1297"><a href="https://ebird.org/explore">eBird Explore</a></li>
-                                <li id="menu-item-3231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3231"><a href="https://www.macaulaylibrary.org/">Macaulay Library</a></li>
-                                <li id="menu-item-1302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1302"><a href="https://www.allaboutbirds.org/browse/topic/faqs">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-6068" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6068"><a href="https://www.allaboutbirds.org/living-bird-latest-issue/">Publications</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-1311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1311"><a href="https://www.allaboutbirds.org/living-bird-latest-issue/">Living Bird Magazine</a></li>
-                                <li id="menu-item-1303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1303"><a href="https://birdsoftheworld.org/bow/home">Birds of the World</a></li>
-                                <li id="menu-item-1314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1314"><a href="http://www.stateofthebirds.org/">State of the Birds</a></li>
-                                <li id="menu-item-1317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a href="https://www.birds.cornell.edu/home/publications/">Scientific Publications</a></li>
-                                <li id="menu-item-1315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1315"><a href="https://www.birds.cornell.edu/clementschecklist/?__hstc=75100365.c70712fb55889a1e2031a3bf92292bd0.1538664071585.1538685134471.1538744947105.4&#038;__hssc=75100365.5.1538748429742&#038;__hsfp=1973963874#_ga=2.233507294.1543017368.1538664071-1800547410.1538664071&#038;_gac=1.124188152.1538686263.Cj0KCQjw9NbdBRCwARIsAPLsnFb-RssJaVivwNZvhdCar56c7rt6HYG4BqXPUes0KnJzSN-JStUNSiIaAiJVEALw_wcB">Clements Checklist</a></li>
-                                <li id="menu-item-3234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3234"><a href="https://cornelllabpgstore.com/">Books for All Ages</a></li>
-                                <li id="menu-item-3236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3236"><a href="https://www.birds.cornell.edu/home/annual-report/">Cornell Lab Annual Report 2022</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-1262" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1262"><a href="https://www.birds.cornell.edu/home/get-involved/">Quick Finders</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-5971" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5971"><a href="https://www.birds.cornell.edu/home/members/">Members</a></li>
-                                <li id="menu-item-3237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3237"><a href="https://www.birds.cornell.edu/home/visit/">Visitors</a></li>
-                                <li id="menu-item-3250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3250"><a href="http://birds.cornell.edu/citizenscience">Citizen-Science Participants</a></li>
-                                <li id="menu-item-3238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3238"><a href="http://birds.cornell.edu/k12">K–12 Educators</a></li>
-                                <li id="menu-item-3242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3242"><a href="https://www.birds.cornell.edu/students/">Students</a></li>
-                                <li id="menu-item-6366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6366"><a href="https://www.birds.cornell.edu/home/postdoctoral-scholars-program/">Postdoctoral Program</a></li>
-                                <li id="menu-item-6303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6303"><a href="https://www.birds.cornell.edu/home/shop-for-our-cause/">Shop for Our Cause</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-1266" class="footer-menu-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1266"><a href="https://give.birds.cornell.edu/page/87895/donate/1?ea.tracking.id=BCF">Donate</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271"><a href="https://www.birds.cornell.edu/home/give/">Support Our Cause</a></li>
-                                <li id="menu-item-1268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1268"><a href="https://give.birds.cornell.edu/page/99134/donate/1?ea.tracking.id=BCF">Monthly Giving</a></li>
-                                <li id="menu-item-1267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1267"><a href="https://join.birds.cornell.edu/ea-action/action?ea.client.id=1806&#038;ea.campaign.id=28635&#038;ea.tracking.id=BCF">Join</a></li>
-                                <li id="menu-item-1287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1287"><a href="https://join.birds.cornell.edu/ea-action/action?ea.client.id=1806&#038;ea.campaign.id=23683&#038;ea.tracking.id=DRD#_ga=2.237129536.1543017368.1538664071-1800547410.1538664071">Golden-wing Society</a></li>
-                                <li id="menu-item-3247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3247"><a href="https://www.birds.cornell.edu/home/give/chairmans-council/">Chairman’s Council</a></li>
-                                <li id="menu-item-1283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1283"><a href="https://birds.cornell.giftplans.org/">Planned Giving</a></li>
-                            </ul>
-                        </li>
-                    </ul>          </nav>
-            </div><!-- .footer-menu -->
-
-            <div class="footer-contact grid-x">
-                <div class="cell medium-2 small-6 cu-logo">
-                    <img  alt="Cornell University" data-src="https://www.birds.cornell.edu/home/wp-content/themes/birdpress2/images/cornell-logo.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://www.birds.cornell.edu/home/wp-content/themes/birdpress2/images/cornell-logo.svg" alt="Cornell University"></noscript>
-                </div><!-- .cu-logo -->
-
-
-                <div class="cell medium-auto small-12 flex-child-grow contact">
-                    <div class="social hide-for-print">
-                        <ul class="social-icons"><li class="twitter"><a href="https://twitter.com/cornellbirds" title="Follow us on Twitter"><span class="fab fa-twitter"></span></a></li><li class="facebook"><a href="https://www.facebook.com/cornellbirds" title="Like us on Facebook"><span class="fab fa-facebook-f"></span></a></li><li class="instagram"><a href="https://www.instagram.com/cornellbirds" title="Follow us on Instagram"><span class="fab fa-instagram"></span></a></li></ul>            </div>
-
-                    <div class="menu-footer-contact-list-container"><ul id="contact-nav" class="menu hide-for-print"><li id="menu-item-2642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2642"><a href="https://www.birds.cornell.edu/home/contact-us/">Contact Us</a></li>
-                            <li id="menu-item-11332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11332"><a href="https://www.birds.cornell.edu/home/our-commitment-to-diversity-equity-inclusion-and-justice/">Land Acknowledgment</a></li>
-                            <li id="menu-item-10589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10589"><a href="https://www.birds.cornell.edu/home/web-accessibility-assistance/">Web Accessibility Assistance</a></li>
-                            <li id="menu-item-11355" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11355"><a href="https://privacy.cornell.edu/information-use-cornell">Privacy Policy</a></li>
-                            <li id="menu-item-2643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2643"><a href="https://www.birds.cornell.edu/home/terms-of-use/">Terms of use</a></li>
-                        </ul></div>
-                    <p class="source-org copyright">&copy; 2023 Cornell University</p>          </div><!-- .contact -->
-
-            </div><!-- .footer-contact -->
-
-        </div> <!-- end .grid-container -->
-
-    </footer> <!-- end .footer -->
+<!--Footer-->
+    <%@ include file="footer.html" %> 
 
 
     <!-- BEGIN Search modal -->
