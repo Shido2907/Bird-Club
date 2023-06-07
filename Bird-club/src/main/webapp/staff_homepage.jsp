@@ -270,7 +270,7 @@
             </div>
         </div>
 
-     <%@ include file="staff_header.html" %> 
+     <%@ include file="staff_header.jsp" %> 
 
 
 

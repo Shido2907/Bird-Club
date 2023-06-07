@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class StaffAccountManager {
         public boolean approveUser(String UID) {
-        String sql = "UPDATE [User] SET status = 'unactive' WHERE UID = ?";
+        String sql = "UPDATE [User] SET status = 'active' WHERE UID = ?";
 
         try (Connection conn = DBUtils.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -72,17 +72,34 @@ public class StaffAccountManager {
 
         return users;
     }
+   
+ public String getUserEmail(String userId) {
+    String email = null;
+    String sql = "SELECT email FROM [User] WHERE UID = ?";
+
+    try (Connection conn = DBUtils.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setString(1, userId);
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+            email = rs.getString("email");
+        }
+
+        rs.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return email;
+}
    public static void main(String[] args) {
-    String userId = "u22750"; // Replace with the actual user ID you want to approve
+    String userId = "user"; // Replace with the actual user ID you want to approve
 
     StaffAccountManager userDao = new StaffAccountManager();
-    boolean success = userDao.approveUser(userId);
+    String email = userDao.getUserEmail(userId);
+        System.out.println("Email :"+ email);
 
-    if (success) {
-        System.out.println("User approval successful!");
-    } else {
-        System.out.println("User approval failed!");
-    }
 }
    
 }

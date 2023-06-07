@@ -43,7 +43,7 @@ public class UserAccessController extends HttpServlet {
                     if (status.equals("unactive")) {
                         response.sendRedirect(request.getContextPath() + "/EventDetails.jsp");
                     } else {
-                        if (role.equals("user")) {
+                        if (role.equals("member")) {
                             response.sendRedirect(request.getContextPath() + "/member_homepage.jsp");
                         } else if (role.equals("staff")) {
                             response.sendRedirect(request.getContextPath() + "/staff_homepage.jsp");

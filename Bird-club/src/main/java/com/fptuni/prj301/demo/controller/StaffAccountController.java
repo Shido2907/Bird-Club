@@ -15,6 +15,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import tool.utils.Mailer;
 
 /**
  *
@@ -46,7 +48,9 @@ public class StaffAccountController extends HttpServlet {
             boolean success = userDao.approveUser(userId);
 
             if (success) {
-                response.sendRedirect("staff_homepage.jsp");
+                String email= userDao.getUserEmail(userId);
+                Mailer.send("prj301.pgnb@gmail.com","nqlgrybvvyqjoaxw", email,"Bird Club","You account have been approve");
+                response.sendRedirect(request.getContextPath() +"staff_homepage.jsp");
             } else {
                 response.sendRedirect("staff_approval_failure.jsp");
             }
