@@ -308,9 +308,12 @@
                         <table>
                             <tr>
                                 <th>User Name</th>
+                                <th> Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
                                 <th>Actions</th>
                             </tr
-                            <c:if test="${empty userList}">
+                            <c:if test="${userList.size()==0}">
                                 <div id="memberListContainer">
                                     <h4>Member List</h4>
                                     <p>No members found.</p>
@@ -321,9 +324,12 @@
                                 <c:forEach var="user" items="${userList}">
                                     <tr>
                                         <td>${user.userName}</td>
+                                        <td>${user.fullName}</td>
+                                        <td>${user.phone}</td>
+                                        <td>${user.email}</td>
                                         <td>
                                             <form action="${pageContext.request.contextPath}/StaffAccountController?action=approve" method="POST">
-<!--                                                <input type="hidden" name="action" value="approve" />-->
+                                                <!--                                                <input type="hidden" name="action" value="approve" />-->
                                                 <input type="hidden" name="UID" value="${user.userId}" />
                                                 <button type="submit" class="px-4 py-2 text-sm text-white shadow-sm border-transparent bg-teal-600 hover:bg-teal-700 focus:ring-teal-500 inline-flex items-center border font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2" data-turbo-frame="modal">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="-ml-1 mr-3 w-5 h-5">
